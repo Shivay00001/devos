@@ -1,0 +1,23 @@
+# DevOS Python Dependencies
+
+# Core Dependencies
+requests>=2.31.0
+click>=8.1.0
+
+# Optional AI Provider Dependencies
+# Uncomment based on your provider choice
+
+# For OpenAI
+# openai>=1.0.0
+
+# For Anthropic
+# anthropic>=0.7.0
+
+# For Google Gemini
+# google-generativeai>=0.3.0
+
+# Development Dependencies (install with: pip install -e ".[dev]")
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.0.0

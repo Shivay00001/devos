@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  devos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devos
+    volumes:
+      - ./:/workspace
+      - devos_config:/root/.config/devos
+      - devos_logs:/root/.local/share/devos/logs
+    environment:
+      - DEVOS_LOG_LEVEL=info
+      - DEVOS_AI_PROVIDER=ollama
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    networks:
+      - devos-network
+
+  # Optional: Ollama service for local LLM
+  ollama:
+    image: ollama/ollama:latest
+    container_name: devos-ollama
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    networks:
+      - devos-network
+    profiles:
+      - with-ollama
+
+volumes:
+  devos_config:
+  devos_logs:
+  ollama_data:
+
+networks:
+  devos-network:
+    driver: bridge

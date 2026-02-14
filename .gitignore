@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+pytest_results.txt
+pytest_results_utf8.txt
+test_validator_results.txt
+test_processor_results.txt
+test_integration_results.txt
+test_integration_results_v2.txt
+final_tests_results.txt
+go_test_results.txt
+extract_failures.py
+check_ai.py
+
+# Go
+bin/
+devos.exe
+devos
+vendor/
+
+# OS
+.DS_Store
+Thumbs.db
