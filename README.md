@@ -1,5 +1,7 @@
 # DevOS - AI-Native Developer Operating Layer
 
+Built by [VisionQuantech](https://visionquantech.com) — AI agents, apps & tools for small businesses.
+
 <div align="center">
 
 ```
